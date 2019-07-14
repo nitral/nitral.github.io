@@ -1,4 +1,27 @@
+# Jekyll
 _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
+
+# Ruby
+*.gem
+.bundle
+_asset_bundler_cache
+Gemfile.lock
+
+codekit-config.json
+
+# Node
+node_modules
+npm-debug.log
+
+# OS
+[Tt]humbs.db
+[Dd]esktop.ini
+*.DS_Store
+
+# Editor Temporary Files
+*.*~
+*.sublime-project
+*.sublime-workspace
