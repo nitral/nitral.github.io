@@ -12,7 +12,7 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "myawesomeskin" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
@@ -24,8 +24,8 @@ url                      : "https://nitral.github.io" # the base hostname & prot
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "nitral/nitral.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : " " # overrides the website title displayed in the masthead, use " " for no title
+logo                     : "/assets/images/logo.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+masthead_title           : "Own Echo" # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -65,7 +65,7 @@ reCaptcha:
 atom_feed:
   path                   : # blank (default) uses feed.xml
 search                   : true # true, false (default)
-search_full_content      : # true, false (default)
+search_full_content      : true # true, false (default)
 search_provider          : # lunr (default), algolia, google
 algolia:
   application_id         : # YOUR_APPLICATION_ID
@@ -115,23 +115,24 @@ author:
   bio              : "Technology, Philosophy, and Design."
   location         :
   email            :
+  home             : "/"
   links:
-    - label: "Email"
+    - label: ""
       icon: "fas fa-fw fa-envelope-square"
-      url: mailto:nilaybinjola@gmail.com
-    - label: "Website"
+      url: "mailto:nilaybinjola@gmail.com"
+    - label: ""
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
-    - label: "Twitter"
+    - label: ""
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/nilaybinjola"
-    - label: "Facebook"
+    - label: ""
       icon: "fab fa-fw fa-facebook-square"
       url: "https://facebook.com/nilaybinjola"
-    - label: "GitHub"
+    - label: ""
       icon: "fab fa-fw fa-github"
       url: "https://github.com/nitral"
-    - label: "Instagram"
+    - label: ""
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/nilaybinjola"
 
@@ -199,7 +200,7 @@ markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 markdown: kramdown
 highlighter: rouge
 lsi: false
-excerpt_separator: "\n\n"
+excerpt_separator: "<!--more-->"
 incremental: false
 
 
@@ -297,6 +298,7 @@ defaults:
       comments: # true
       share: true
       related: true
+      permalink: /posts/:title
   # _pages
   - scope:
       path: ""
