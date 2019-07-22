@@ -1,0 +1,77 @@
+---
+layout: default
+permalink: /404.html
+---
+<style>
+  .head {
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+  }
+
+  .head-1 {
+    font-size: xx-large;
+  }
+
+  .head-2 {
+    font-size: x-large;
+  }
+
+
+  .head-1:hover {
+    color: #ff0000;
+  }
+
+  .head-2:hover {
+    color: #00ff00;
+  }
+
+  .not_found_img {
+    margin: 0;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+  }
+
+  .attribution {
+    font-size: x-small;
+    text-align: center;
+  }
+</style>
+
+<a href="#" class="head">
+  <p class="head-1">I'd like to help you out.</p>
+</a>
+<a href="#" class="head">
+  <p class="head head-2">Which way did you come in?</p>
+</a>
+<img src="" alt="404 Squared! Image not found in a NOT_FOUND page." class="not_found_img">
+<p class="attribution">Find these fantastic imaginary Tumbeasts by The Oatmeal <a href="https://theoatmeal.com/comics/state_web_winter#tumblr">here</a>!</p>
+
+<script type="text/javascript">
+  function render404Image() {
+    imageset_base_path = "/assets/images/tumbeasts/";
+    imageset = [{
+      filename: "tb_sign1.png",
+      traffic_segment_size: 0.25
+    }, {
+      filename: "tbrun1.png",
+      traffic_segment_size: 0.15
+    }, {
+      filename: "tbservers.png",
+      traffic_segment_size: 0.60
+    }]
+    user_magic_number = Math.random();
+    not_found_img_el = document.getElementsByClassName("not_found_img");
+    cumulative_segment_size = 0.0;
+    for (i = 0; i < imageset.length; i++) {
+      cumulative_segment_size += imageset[i].traffic_segment_size;
+      if (user_magic_number <= cumulative_segment_size) {
+        document.getElementsByClassName("not_found_img")[0].src = imageset_base_path + imageset[i].filename;
+        break;
+      }
+    }
+  }
+  render404Image();
+</script>
