@@ -1,0 +1,73 @@
+/* ==========================================================================
+   My Awesome skin
+   ========================================================================== */
+
+/* Colors */
+$background-color: #ffffff !default;
+$text-color: #000 !default;
+$muted-text-color: $text-color !default;
+$primary-color: #000000 !default;
+$border-color: mix(#fff, $text-color, 75%) !default;
+$footer-background-color: #000 !default;
+$link-color: #302b25 !default;
+$masthead-link-color: $text-color !default;
+$masthead-link-color-hover: $text-color !default;
+$navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;
+
+$general-link-hover-color: #0074D9;
+$masthead-hover-color: #FF4136;
+$author-name-hover: #39CCCC;
+$site-title-hover: #F012BE;
+
+.page__content {
+  .notice,
+  .notice--primary,
+  .notice--info,
+  .notice--warning,
+  .notice--success,
+  .notice--danger {
+    color: $text-color;
+  }
+}
+
+.page__footer {
+  color: #fff !important; // override
+}
+
+.page__footer a {
+  color: #fff !important; // override
+}
+
+.archive__item-title a:link, .archive__item-title a:visited {
+  text-decoration: none;
+  color: $link-color;
+}
+
+.archive__item-title a:hover {
+  text-decoration: underline;
+  color: $link-color !important;
+}
+
+a:hover {
+  color: $general-link-hover-color !important;
+}
+
+.pagination--pager {
+  &:hover {
+    color: #fff !important;
+  }
+}
+
+.masthead__menu-item a:hover {
+  color: $masthead-hover-color !important;
+}
+
+.author__content a:hover {
+  color: $author-name-hover !important;
+}
+
+.site-title {
+  &:hover {
+    color: $site-title-hover !important;
+  }
+}
