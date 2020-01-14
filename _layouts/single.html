@@ -46,6 +46,15 @@ layout: default
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
 
+      <section>
+        {% for post in site.posts limit:4 %}
+          {% if post.id == page.id %}
+            <h3 style='text-align:center'>Thanks for reading! <i class="far fa-smile-beam"></i></h3>
+            {% break %}
+          {% endif %}
+        {% endfor %}
+      </section>
+
       <footer class="page__meta">
         {% if site.data.ui-text[site.locale].meta_label %}
           <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
